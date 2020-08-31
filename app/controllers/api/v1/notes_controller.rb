@@ -20,6 +20,13 @@ class Api::V1::NotesController < ApplicationController
         render json: @note, status: 200
     end 
 
+    def destroy
+        @note = Note.find(params[:id])
+        @note.destroy
+
+        render json: {noteId: @note.id}#, status: 200
+    end 
+
     private
         def note_params
             params.require(:note).permit(:body)
