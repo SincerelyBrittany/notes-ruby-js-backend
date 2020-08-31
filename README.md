@@ -79,3 +79,41 @@ class Api::V1::NotesController < ApplicationController
         end 
 end
 ```
+
+#Routes:
+
+1. Update the routes to reference the api/ make sure to namespace
+```
+  namespace :api do 
+    namespace :v1 do
+      resources :notes
+    end 
+  end
+```
+
+#Create a model
+1. ``rails g model Note``
+2. Update the table that is generated
+3. rails db:create
+4. rails db:migrate
+
+#Create seed.rb 
+
+```
+Note.create([
+    {body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non."},
+    {body: "Aliquam a ullamcorper arcu. Fusce consectetur, sem id egestas aliquet, velit eros laoreet lorem, non imperdiet eros tellus auctor turpis."},
+    {body: "Praesent risus mi, rhoncus non augue nec, malesuada vehicula mauris. Sed at interdum odio. Donec varius porta leo efficitur eleifend." },
+    {body: "Tauris erat lacus, ultricies non tortor nec, aliquam consequat ipsum. Donec ut elit placerat urna posuere congue a et neque."},
+
+])
+```
+
+2. rails s
+3. visit http://localhost:3000/api/v1/notes
+
+Then work on the front end. . .keep the ruby server running so you can reference your database/json.
+Next,create a new diretory inside of the main directory
+1. cd into ``mkdir todo-js-ruby``
+2. ``mkdir js-frontend``
+3. ``cd js-frontend``
