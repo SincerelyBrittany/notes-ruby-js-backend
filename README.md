@@ -117,3 +117,11 @@ Next,create a new diretory inside of the main directory
 1. cd into ``mkdir todo-js-ruby``
 2. ``mkdir js-frontend``
 3. ``cd js-frontend``
+4. ``mkdir bin src styles``
+5. ``touch index.html``
+6. ``cd styles``
+7. touch ``style.css``
+8. ../ 
+9. cd src
+10. ``mkdir adapters components``
+11. touch ``app.js``# notes-ruby-js-backend
