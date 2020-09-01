@@ -2,7 +2,7 @@ class Api::V1::NotesController < ApplicationController
     def index
         @notes = Note.all
         render json: @notes, status: 200
-        #renders notes in json
+        #renders notes in json ++
     end 
 
     def show 
